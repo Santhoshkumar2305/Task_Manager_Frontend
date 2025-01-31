@@ -23,7 +23,7 @@ const Cards = ({ home, setInputDiv, data , setUpdatedData}) => {
         )
 
         try {
-            const response = await axios.put(`http://localhost:3000/api/tasks/update-complete-task/${id}`, {}, { headers })
+            const response = await axios.put(`https://task-manager-backend-urct.onrender.com/api/tasks/update-complete-task/${id}`, {}, { headers })
             alert(response.data.message)
         } catch (error) {
             console.log(error)
@@ -37,7 +37,7 @@ const Cards = ({ home, setInputDiv, data , setUpdatedData}) => {
             )
         )
         try{
-            const response = await axios.put(`http://localhost:3000/api/tasks/update-imp-task/${id}`,{},{headers})
+            const response = await axios.put(`https://task-manager-backend-urct.onrender.com/api/tasks/update-imp-task/${id}`,{},{headers})
             console.log(response)
         }catch(error){
             console.log(error)
@@ -48,7 +48,7 @@ const Cards = ({ home, setInputDiv, data , setUpdatedData}) => {
         const prevTasks=[...taskData]
         setTaskData(prevTasks.filter(task => task._id !== id));
         try{
-        const response = await axios.delete(`http://localhost:3000/api/tasks/delete-task/${id}`,{headers})
+        const response = await axios.delete(`https://task-manager-backend-urct.onrender.com/api/tasks/delete-task/${id}`,{headers})
         console.log(response)
         }
         catch(error){
