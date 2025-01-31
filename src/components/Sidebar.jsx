@@ -49,7 +49,7 @@ const Sidebar = () => {
     }
     useEffect(() => {
         const fetch = async () => {
-            const response = await axios.get("http://localhost:3000/api/tasks/get-all-tasks", { headers })
+            const response = await axios.get("https://task-manager-backend-urct.onrender.com/api/tasks/get-all-tasks", { headers })
             setData(response.data.data)
         }
         if(localStorage.getItem('id') && localStorage.getItem('token')){
