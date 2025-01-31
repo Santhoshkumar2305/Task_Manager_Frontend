@@ -23,7 +23,7 @@ const Login = () => {
                 alert("All fields are required")
             }
             else{
-                const response = await axios.post('http://localhost:3000/api/login',Data)
+                const response = await axios.post('https://task-manager-backend-urct.onrender.com/api/login',Data)
                 setData({username:"",password:""})
                 localStorage.setItem('id', response.data.id);
                 localStorage.setItem('token', response.data.token);   
