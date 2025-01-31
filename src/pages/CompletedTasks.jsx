@@ -9,7 +9,7 @@ const CompletedTasks = () => {
 }
 
 const fetchTasks = async () => {
-  const response = await axios.get("http://localhost:3000/api/tasks/get-complete-tasks", { headers })
+  const response = await axios.get("https://task-manager-backend-urct.onrender.com/api/tasks/get-complete-tasks", { headers })
   setData(response.data.data)
 }
 
