@@ -22,7 +22,7 @@ const SignUp = () => {
                 alert("All fields are required")
             }
             else{
-                const response = await axios.post('http://localhost:3000/api/signup',Data)
+                const response = await axios.post('https://task-manager-backend-urct.onrender.com/api/signup',Data)
                 setData({username:"",email:"",password:""})
                 alert(response.data.message)
                 history('/login')
