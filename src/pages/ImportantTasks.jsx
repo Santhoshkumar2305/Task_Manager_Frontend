@@ -9,7 +9,7 @@ const ImportantTasks = () => {
 }
 
 const fetchTasks = async () => {
-  const response = await axios.get("http://localhost:3000/api/tasks/get-imp-tasks", { headers })
+  const response = await axios.get("https://task-manager-backend-urct.onrender.com/api/tasks/get-imp-tasks", { headers })
   setData(response.data.data)
 }
 
